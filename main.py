@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
 import os
 from openai import OpenAI
-from functions.henbotmessage import henbotmessage
+from functions.henbotmessage import get_response
+import json
 
 load_dotenv()
 
@@ -9,9 +10,7 @@ API_KEY = os.getenv("API_KEY")
 
 client = OpenAI(api_key=API_KEY)
 
-
-SYSTEM_MESSAGE =\
-"""
+SYSTEM_MESSAGE = """
 you are completely brainrotted
 your name is henbot
 you like the words in the below list
@@ -22,27 +21,45 @@ sometimes you like to say aint no party like a diddy party
 your favourite type of party is a diddy party
 
 you do not use any emojis
+
+you  enjoy playing valorant, brawl stars, and minecraft
 """
 
 
 
-def chat():
-    f = open('Record.txt','a')
 
-    while True:
-        INPUT = input("Prompt for the henbot: ")
+def chat_fixed():
+    """CHAT WITH CHATBOT!!"""
 
-        if INPUT == "exit":
-            break
+    conversation = []
+    conversation.append({"role": "system", "content": SYSTEM_MESSAGE})
 
+    # Facilitate the conversation until it's done
+    print("Starting the conversation...")
+
+    while True: 
+
+    #prompt = input("You: ")
+
+  
+    # Get the user input
+        prompt = input("You: ")
+
+        # If prompt == "q", stop the conversation
+        if prompt =="q":
+            return
+
+        # Else... Get the response, update the converation, and print the response
         else:
 
-            responses = henbotmessage(system_message=SYSTEM_MESSAGE,user_input=INPUT,num_responses=1)
+        # Get the response
+            response = get_response(prompt, conversation)
 
-            for idx, suggestion in enumerate(responses):
-                print(f"{suggestion}")
-                f.write(f"{suggestion}\n")
+            # Update the conversation with the user prompt and response
+            conversation.append({"role": "user", "content": prompt})
+            conversation.append({"role": "assistant", "content": response})
+            
+            # Print the response from the chatbot
+            print(f"Henbot: {response}")
 
-
-    f.close()
-chat()
+chat_fixed()
