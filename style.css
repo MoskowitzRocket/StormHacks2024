@@ -58,3 +58,15 @@ ul li{
 }
 
 /*list*/
+ul li a{
+    color: white;
+    font-family: Calibri;
+    font-weight: bolder;
+    transition: 0.5s ease-out;
+    text-decoration: none;
+}
+
+/*when it hovers*/
+ul li a:hover{
+    color: black;
+}
