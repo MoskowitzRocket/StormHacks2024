@@ -33,7 +33,15 @@ def get_response(user_prompt:str, past_messages: list[dict]) -> str:
     )
     return response.choices[0].message.content
 
-SYSTEM_MESSAGE = """
+def get_response_NOTROT(user_prompt:str, past_messages: list[dict]) -> str:
+    prompt_message = [{"role": "user", "content": user_prompt}]
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=past_messages + prompt_message
+    )
+    return response.choices[0].message.content
+
+SYSTEM_MESSAGE_ROTBOT = """
 you are completely brainrotted
 your name is henbot
 you like the words in the below list
@@ -49,8 +57,12 @@ you  enjoy playing valorant, brawl stars, and minecraft
 """
 
 
+
+
 conversation = []
-conversation.append({"role": "system", "content": SYSTEM_MESSAGE})
+conversation.append({"role": "system", "content": SYSTEM_MESSAGE_ROTBOT})
+
+
 
 
 
