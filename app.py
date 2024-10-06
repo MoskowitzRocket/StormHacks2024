@@ -52,6 +52,8 @@ you  enjoy playing valorant, brawl stars, and minecraft
 conversation = []
 conversation.append({"role": "system", "content": SYSTEM_MESSAGE})
 
+
+
 @app.route("/", methods=['POST', 'GET']) 
 def query_view(): 
 	if request.method == 'POST': 
@@ -64,6 +66,15 @@ def query_view():
 
 		return jsonify({'response': response}) 
 	return render_template('index.html') 
+
+@app.route("/about", methods=['GET'])
+def about():
+    return render_template('about.html')
+
+@app.route("/main", methods=['GET'])
+def main():
+	return render_template('main.html')
+
 
 
 if __name__ == "__main__": 
