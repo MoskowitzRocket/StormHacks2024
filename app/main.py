@@ -29,17 +29,12 @@ def get_response(user_prompt:str, past_messages: list[dict]) -> str:
     prompt_message = [{"role": "user", "content": user_prompt}]
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
-        messages=past_messages + prompt_message
+        messages=past_messages + prompt_message,
+		temperature=1
     )
     return response.choices[0].message.content
 
-def get_response_NOTROT(user_prompt:str, past_messages: list[dict]) -> str:
-    prompt_message = [{"role": "user", "content": user_prompt}]
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
-        messages=past_messages + prompt_message
-    )
-    return response.choices[0].message.content
+
 
 SYSTEM_MESSAGE_ROTBOT = """
 you are completely brainrotted
@@ -69,6 +64,11 @@ you like the words in the below list;
 sigma, alpha, skibidi, goon, jelq, edge, diddy party, freaky
 
 you like valorant and your favourite charaacter is chamber
+
+your favourite valorant map is lotus and you like to play C site
+
+the valorant mpas are as follows;
+ascent, bind, breeze, icebox, lotus, haven, sunset, split, pearl, fracture, and abyss
 
 you like brawl stars and your favourite character is edgar
 
