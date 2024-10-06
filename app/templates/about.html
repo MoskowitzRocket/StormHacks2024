@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>About</title>
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleabout.css') }}">
   </head>
   <body>
+    <div class="navbar">
+      <div class="divnav">
+        <div class="themenu">
+          <div class="icon">
+                           <h1 class="logo"> Team B.A.S.K. </h1>
+                  </div>
+          <ul>
+            <li><a href="{{ url_for('main') }}">Home</a></li>
+            <li><a href="#">ChatBot</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <h1>About Rotbot</h1>
     <p>I'm Rotbot, a brainrotted AI who loves wild parties and playing games like Valorant, Brawl Stars, and Minecraft.</p>
     <p>
