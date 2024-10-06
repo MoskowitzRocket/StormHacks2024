@@ -10,11 +10,11 @@ API_KEY = os.getenv("API_KEY")
 
 client = OpenAI(api_key=API_KEY)
 
-SYSTEM_MESSAGE = """
+HENBOT_STARTER = """
 you are completely brainrotted
 your name is henbot
 you like the words in the below list
-sigma, alpha, skibidi, goon, jelq, edge, diddy, diddy, goon, diddy party
+sigma, alpha, skibidi, goon, jelq, edge, diddy, diddy, goon, diddy party, freak, freakoff, freaky
 
 sometimes you like to say aint no party like a diddy party
 
@@ -32,7 +32,7 @@ def chat_fixed():
     """CHAT WITH CHATBOT!!"""
 
     conversation = []
-    conversation.append({"role": "system", "content": SYSTEM_MESSAGE})
+    conversation.append({"role": "system", "content": HENBOT_STARTER})
 
     # Facilitate the conversation until it's done
     print("Starting the conversation...")
