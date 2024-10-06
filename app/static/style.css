@@ -22,12 +22,14 @@ padding: 0;
     width: 300px;
     float: left;
     height: 90px;
+
 }
 /*the logo*/
 .logo{
     margin-top: 34px;
     color: purple;
     font-size: 40px;
+    font-weight: bold;
 /*maybe customize more stuff for logo*/
 }
 /*background*/
