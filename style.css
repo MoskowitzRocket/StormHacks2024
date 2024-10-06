@@ -1,0 +1,85 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+/*navigation area*/
+.navbar{
+    background: skyblue;
+    font-family: Calibri;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+/*navigation for placement*/
+.divnav{
+   display: flex; 
+   align-items: center;
+   justify-content: space-between;
+}
+
+/*icon*/
+.icon{
+    width: 300px;
+    float: left;
+    height: 90px;
+}
+/*the logo*/
+.logo{
+    margin-top: 34px;
+    color: purple;
+    font-size: 40px;
+/*maybe customize more stuff for logo*/
+}
+/*background*/
+.main{
+    /*color for list*/
+    background: gray;
+    padding-bottom: 1000px;
+}
+
+/*the menu*/
+.menu{
+    width: 300px;
+    float: left;
+    height: 70px;
+
+}
+
+/*aligning the list*/
+ul{
+    float: left;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+/*lists*/
+ul li{
+    list-style: none;
+    margin-left: 70px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+/*list*/
+ul li a{
+    color: white;
+    font-family: Calibri;
+    font-weight: bolder;
+    transition: 0.5s ease-out;
+    text-decoration: none;
+}
+
+/*when it hovers*/
+ul li a:hover{
+    color: black;
+}
+
+/*body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: gray;
+}
+
