@@ -28,7 +28,7 @@ padding: 0;
     margin-top: 34px;
     color: purple;
     font-size: 40px;
-/*maybe customize more stuff for logo*/   
+/*maybe customize more stuff for logo*/
 }
 /*background*/
 .main{
@@ -42,7 +42,7 @@ padding: 0;
     width: 300px;
     float: left;
     height: 70px;
-    
+
 }
 
 /*aligning the list*/
@@ -74,3 +74,12 @@ ul li a{
 ul li a:hover{
     color: black;
 }
+
+/*body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: gray;
+}
+
