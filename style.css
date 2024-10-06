@@ -17,28 +17,31 @@ padding: 0;
    justify-content: space-between;
 }
 
-/*icon*/
+/*header color*/
 .icon{
     width: 300px;
     float: left;
-    height: 80px;
+    height: 90px;
 }
 /*the logo*/
 .logo{
+    margin-top: 34px;
     color: purple;
+    font-size: 40px;
 /*maybe customize more stuff for logo*/   
 }
 /*background*/
 .main{
     /*color for list*/
-    background: linear-gradient(to top);
+    background: gray;
+    padding-bottom: 1000px;
 }
 
 /*the menu*/
 .menu{
     width: 300px;
     float: left;
-    height: 80px;
+    height: 70px;
 }
 
 /*aligning the list*/
@@ -54,7 +57,7 @@ ul li{
     list-style: none;
     margin-left: 70px;
     margin-top: 30px;
-    font-size: 15px;
+    font-size: 25px;
 }
 
 /*list*/
@@ -70,3 +73,4 @@ ul li a{
 ul li a:hover{
     color: black;
 }
+
